@@ -1,6 +1,6 @@
 # Sentiment Analysis with Machine Learning
 
-![Sentiment Analysis](sentiment-analysis.png)
+
 
 ## Project Overview
 
