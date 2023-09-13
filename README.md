@@ -20,7 +20,7 @@ Before getting started, ensure you have the following prerequisites:
    - `google.colab`: For Google Colab integration.
 
 - **Dataset:**
-   - Prepare a CSV dataset for training and testing your sentiment analysis model. Ensure it has two columns: 'review' (textual data) and 'sentiment' (positive or negative sentiment labels). Due to the large size of the dataset (55MB), consider compressing it into a zip file and include it in your repository.
+   - Prepare a CSV dataset for training and testing your sentiment analysis model. Ensure it has two columns: 'review' (textual data) and 'sentiment' (positive or negative sentiment labels). Due to the large size of the dataset (55MB), consider compressing the zip file and include it in your repository.
 
    **Note:** Mention in the README that the dataset is compressed into a zip file in the repository.
 
