@@ -38,4 +38,50 @@ Before getting started, ensure you have the following prerequisites:
    - Removing Stopwords: Eliminate common English words that don't contribute significantly to the text's meaning using NLTK's stopwords list.
 
    - Tokenization and Vectorization: Tokenize the text (split it into individual words) and convert it into numerical features using CountVectorizer from scikit-learn.
+ 
+## Model Building and Evaluation
 
+- **Logistic Regression Model**: Build a sentiment analysis model using Logistic Regression. Here's how you can set up the model:
+
+      ```python
+       from sklearn.pipeline import Pipeline
+       from sklearn.linear_model import LogisticRegression
+
+       pipeline = Pipeline([
+       ('vectorizer', CountVectorizer()),    # Vectorize the text data
+       ('classifier', LogisticRegression(max_iter=86)), 
+       ])
+
+    - Fit the model on the training data and evaluate its performance on a test set using accuracy. Visualize the results using a confusion matrix.
+
+2. **Random Forest Classifier Model**: Create a sentiment analysis model using the Random Forest Classifier with CountVectorizer for feature extraction:
+
+      ```python
+       from sklearn.ensemble import RandomForestClassifier
+       pipeline = Pipeline([
+       ('vectorizer', CountVectorizer()),
+       ('classifier', RandomForestClassifier(n_estimators=185))
+       ])
+
+ - Assess the model's accuracy and display the confusion matrix to better understand its performance.
+
+3.**Precision-Recall Curve**: Generate a precision-recall curve to analyze the model's precision and recall characteristics for different probability thresholds.
+
+
+## Cross-Validation
+
+To ensure the models' robustness and generalization, employ 5-fold cross-validation for both Logistic Regression and Random Forest Classifier models. Evaluate each classifier's performance using accuracy and standard deviation.
+
+## Results and conclusion 
+
+After running the code, we obtained the following results:
+
+ - Logistic Regression Model:
+     - Accuracy: 0.8804897959183674
+ - Random Forest Classifier Model:
+     - Accuracy: 0.8558367346938776
+  
+The Logistic Regression model outperformed the Random Forest Classifier in terms of accuracy. However, the warning messages suggest that the Logistic Regression model may benefit from increasing the number of iterations or scaling the data. Further tuning and optimization of hyperparameters may improve its performance.
+
+In conclusion, this project provides a solid foundation for sentiment analysis using machine learning techniques. By referencing the provided documentation and exploring alternative solver options, you can enhance the Logistic Regression model's performance. Additionally, you have the flexibility to fine-tune both models and adapt them to your specific use cases. Enjoy sentiment analysis on large textual datasets!
+   
