@@ -33,3 +33,9 @@ Before getting started, ensure you have the following prerequisites:
        articles = file
    df = pd.read_csv('/content/drive/MyDrive/Dataset.csv')
 
+- **Data Preprocessing:** Before feeding the data into machine learning models, perform essential preprocessing tasks:
+
+   - Removing Stopwords: Eliminate common English words that don't contribute significantly to the text's meaning using NLTK's stopwords list.
+
+   - Tokenization and Vectorization: Tokenize the text (split it into individual words) and convert it into numerical features using CountVectorizer from scikit-learn.
+
